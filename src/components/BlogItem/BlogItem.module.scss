@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: var(--black);
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--grey-bland);
+  }
+  &:hover .blog-title {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.blog-title {
+  flex: 1;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

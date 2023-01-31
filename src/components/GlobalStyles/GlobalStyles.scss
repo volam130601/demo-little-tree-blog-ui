@@ -2,11 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 :root {
-  --primary: #fe2c55;
+  --primary: #4e8938;
+  --primary-bland: #80cc2b;
+  --primary-dark: #355555;
+  --white: #fff;
+  --black: #000;
+  --grey:  #7b7a7a;
+  --grey-bland: #e6e6e6;
 
-   // Default layout
-   --default-layout-header-height: 60px;
-   --default-layout-width: 1150px;
+  //Text
+  --text-grey: #7b7a7a;
+
+  // Default layout
+  --default-layout-header-height: 60px;
+  --default-layout-width: 1150px;
 }
 
 * {
@@ -23,4 +32,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizespeed;
+}
+
+input , button {
+  outline: none;
 }
