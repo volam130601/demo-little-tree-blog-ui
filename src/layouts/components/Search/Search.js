@@ -63,13 +63,13 @@ function Search() {
   const data = [
     {
       id: 1,
-      code: "SB.Basic",
+      code: "SB-Basic",
       blog_image: images.image_test,
       title: "Spring boot basic",
     },
     {
       id: 2,
-      code: "SB.Advanced",
+      code: "SB-Advanced",
       blog_image: images.image_test,
       title: "Spring boot advanced",
     },

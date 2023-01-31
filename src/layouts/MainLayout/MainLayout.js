@@ -1,8 +1,8 @@
-import Header from "../components/Header/Header";
-import Sidebar from "./Sidebar/Sidebar";
 
 import styles from "./MainLayout.module.scss";
 import classNames from "classnames/bind";
+import Sidebar from "./Sidebar";
+import Header from "../components/Header";
 const cx = classNames.bind(styles);
 
 function MainLayout({ children }) {

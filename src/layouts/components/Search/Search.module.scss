@@ -5,13 +5,13 @@
 
 .search {
   --search-width: 50px;
-
+ 
   display: flex;
   position: relative;
   height: calc(var(--default-layout-header-height) - 20px);
   border: 2px solid var(--grey-bland);
   border-radius: 20px;
-
+  margin-right: 20px;
   input {
     font-size: 1.6rem;
     border: none;
