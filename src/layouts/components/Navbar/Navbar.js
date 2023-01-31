@@ -26,7 +26,7 @@ function Navbar() {
         </Link>
         <Link to={config.routes.reactjs} className={cx("navbar-item")}>
           <span>
-              <DiReact className={cx("navbar-icon")} />
+            <DiReact className={cx("navbar-icon")} />
             ReactJs
           </span>
         </Link>

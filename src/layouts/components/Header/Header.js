@@ -18,7 +18,6 @@ function Header() {
           {/* Toggle dark/light theme */}
           {/* Combobox language */}
         </div>
-        <div className={cx("line")}></div>
         <div className={cx("header-bottom")}>
           <div className={cx("inner")}>
             <Navbar />
