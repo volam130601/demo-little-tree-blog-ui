@@ -1,0 +1,48 @@
+.footer {
+  width: 100%;
+  background-color: #fff;
+}
+
+.footer-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    .link {
+        color: var(--black);
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-decoration: none;    
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            height: 100%;
+            width: 20px;
+        }
+        span {
+            padding-left: 6px;
+        }
+        &:hover {
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    p {
+        line-height: 2rem;
+        font-size: 1.5rem;
+        color: var(--grey);
+    }
+
+    .button {
+        background-color: transparent;
+        outline: blue;
+        color: blue;
+        padding: 10px;
+        
+    }
+}
+
