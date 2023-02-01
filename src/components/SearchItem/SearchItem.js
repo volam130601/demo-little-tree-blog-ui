@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames/bind";
-import styles from "./BlogItem.module.scss";
+import styles from "./SearchItem.module.scss";
 import Image from "~/components/Image";
 const cx = classNames.bind(styles);
 
-function BlogItem({data}) {
+function SearchItem({data}) {
   return (
     <Link to={`/${data.code}`} className={cx("wrapper")}>
       <Image
@@ -18,4 +18,4 @@ function BlogItem({data}) {
   );
 }
 
-export default BlogItem;
+export default SearchItem;

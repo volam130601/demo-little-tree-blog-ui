@@ -1,19 +1,15 @@
 import { useEffect, useState, useRef } from "react";
 import classNames from "classnames/bind";
 import { BiSearch } from "react-icons/bi";
-import { AiFillCloseCircle,
-  //  AiOutlineLoading3Quarters 
-  } from "react-icons/ai";
+import { AiFillCloseCircle, AiOutlineLoading3Quarters } from "react-icons/ai";
 import HeadlessTippy from "@tippyjs/react/headless";
 
-// import * as searchServices from '~/services/searchService';
+// import * as searchServices from "~/services/searchService";
 import { Wrapper as PopperWrapper } from "~/components/Popper";
-// import AccountItem from '~/components/AccountItem';
-// import { SearchIcon } from '~/components/Icons';
-// import { useDebounce } from '~/hooks';
+import { useDebounce } from "~/hooks";
 import styles from "./Search.module.scss";
-import BlogItem from "~/components/BlogItem";
-// import images from "~/assets/images";
+import SearchItem from "~/components/SearchItem";
+import images from "~/assets/images";
 
 const cx = classNames.bind(styles);
 
@@ -21,29 +17,29 @@ function Search() {
   const [searchValue, setSearchValue] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [showResult, setShowResult] = useState(false);
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  //   const debouncedValue = useDebounce(searchValue, 500);
+  const debouncedValue = useDebounce(searchValue, 500);
 
   const inputRef = useRef();
 
-  //   useEffect(() => {
-  //     if (!debouncedValue.trim()) {
-  //       setSearchResult([]);
-  //       return;
-  //     }
+  useEffect(() => {
+    if (!debouncedValue.trim()) {
+      setSearchResult([]);
+      return;
+    }
 
-  //     const fetchApi = async () => {
-  //       setLoading(true);
+    // const fetchApi = async () => {
+    // setLoading(true);
 
-  //       const result = await searchServices.search(debouncedValue);
+    // const result = await searchServices.search(debouncedValue);
 
-  //       setSearchResult(result);
-  //       setLoading(false);
-  //     };
+    // setSearchResult(result);
+    // setLoading(false);
+    // };
 
-  //     fetchApi();
-  //   }, [debouncedValue]);
+    // fetchApi();
+  }, [debouncedValue]);
 
   const handleClear = () => {
     setSearchValue("");
@@ -62,24 +58,24 @@ function Search() {
     }
   };
 
-  // const data = [
-  //   {
-  //     id: 1,
-  //     code: "SB-Basic",
-  //     blog_image: images.image_test,
-  //     title: "Spring boot basic",
-  //   },
-  //   {
-  //     id: 2,
-  //     code: "SB-Advanced",
-  //     blog_image: images.image_test,
-  //     title: "Spring boot advanced",
-  //   },
-  // ];
+  const data = [
+    {
+      id: 1,
+      code: "SB-Basic",
+      blog_image: images.image_test,
+      title: "Spring boot basic",
+    },
+    {
+      id: 2,
+      code: "SB-Advanced",
+      blog_image: images.image_test,
+      title: "Spring boot advanced",
+    },
+  ];
   useEffect(() => {
     setTimeout(() => {
-      setSearchResult([]);
-    },0);
+      setSearchResult(data);
+    }, 0);
   }, []);
 
   return (
@@ -92,7 +88,7 @@ function Search() {
             <PopperWrapper>
               <h4 className={cx("search-title")}>Blogs</h4>
               {searchResult.map((result) => (
-                <BlogItem key={result.id} data={result} />
+                <SearchItem key={result.id} data={result} />
               ))}
             </PopperWrapper>
           </div>

@@ -12,6 +12,101 @@ import CardItem from "~/components/CardItem";
 const cx = classNames.bind(styles);
 
 function Home() {
+  const newUpdatedList = [
+    {
+      id: 1,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+      createDate: "19 December, 2019",
+    },
+    {
+      id: 2,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+      createDate: "19 December, 2019",
+    },
+    {
+      id: 3,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+      createDate: "19 December, 2019",
+    },
+    {
+      id: 4,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+      createDate: "19 December, 2019",
+    },
+    {
+      id: 5,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+      createDate: "19 December, 2019",
+    },
+  ];
+
+  const topViewsList = [
+    {
+      id: 1,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+    },
+    {
+      id: 2,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+    },
+    {
+      id: 3,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+    },
+    {
+      id: 4,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+    },
+    {
+      id: 5,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+    },
+    {
+      id: 6,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+    },
+    {
+      id: 7,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+    },
+    {
+      id: 8,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+    },
+    {
+      id: 9,
+      code: "blog-1",
+      title: `[Spring Boot] Instructions for creating Validation yourself
+      to check Model & Entity`,
+    },
+  ];
+
   return (
     <Container className={cx("wrapper")}>
       <Row>
@@ -39,78 +134,17 @@ function Home() {
           <CardItem borderWarning>
             <div className={cx("card-list")}>
               <h2 className={cx("card-title")}>Top Views</h2>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Link to={"/"} className={cx("card-link")}>
-                    [Spring Boot] Instructions for creating Validation yourself
-                    to check Model & Entity
-                  </Link>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Link to={"/"} className={cx("card-link")}>
-                    [Spring Boot] Instructions for creating Validation yourself
-                    to check Model & Entity
-                  </Link>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Link to={"/"} className={cx("card-link")}>
-                    [Spring Boot] Instructions for creating Validation yourself
-                    to check Model & Entity
-                  </Link>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Link to={"/"} className={cx("card-link")}>
-                    [Spring Boot] Instructions for creating Validation yourself
-                    to check Model & Entity
-                  </Link>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Link to={"/"} className={cx("card-link")}>
-                    [Spring Boot] Instructions for creating Validation yourself
-                    to check Model & Entity
-                  </Link>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Link to={"/"} className={cx("card-link")}>
-                    [Spring Boot] Instructions for creating Validation yourself
-                    to check Model & Entity
-                  </Link>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Link to={"/"} className={cx("card-link")}>
-                    [Spring Boot] Instructions for creating Validation yourself
-                    to check Model & Entity
-                  </Link>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Link to={"/"} className={cx("card-link")}>
-                    [Spring Boot] Instructions for creating Validation yourself
-                    to check Model & Entity
-                  </Link>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Link to={"/"} className={cx("card-link")}>
-                    [Spring Boot] Instructions for creating Validation yourself
-                    to check Model & Entity
-                  </Link>
-                </Row>
-              </div>
+              {topViewsList.map((item) => {
+                return (
+                  <div key={item.id} className={cx("card-item")}>
+                    <Row>
+                      <Link to={`/${item.code}`} className={cx("card-link")}>
+                        {item.title}
+                      </Link>
+                    </Row>
+                  </div>
+                );
+              })}
             </div>
           </CardItem>
         </Col>
@@ -119,81 +153,24 @@ function Home() {
           <CardItem borderPrimary>
             <div className={cx("card-list")}>
               <h2 className={cx("card-title")}>New updated</h2>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Col xs={8}>
-                    <Link to={"/"} className={cx("card-link")}>
-                      [Spring Boot] Instructions for creating Validation
-                      yourself to check Model & Entity
-                    </Link>
-                  </Col>
-                  <Col xs={4}>
-                    <span className="float-end text-muted fs-4">
-                      19 December, 2019
-                    </span>
-                  </Col>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Col xs={8}>
-                    <Link to={"/"} className={cx("card-link")}>
-                      [Spring Boot] Instructions for creating Validation
-                      yourself to check Model & Entity
-                    </Link>
-                  </Col>
-                  <Col xs={4}>
-                    <span className="float-end text-muted fs-4">
-                      19 December, 2019
-                    </span>
-                  </Col>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Col xs={8}>
-                    <Link to={"/"} className={cx("card-link")}>
-                      [Spring Boot] Instructions for creating Validation
-                      yourself to check Model & Entity
-                    </Link>
-                  </Col>
-                  <Col xs={4}>
-                    <span className="float-end text-muted fs-4">
-                      19 December, 2019
-                    </span>
-                  </Col>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Col xs={8}>
-                    <Link to={"/"} className={cx("card-link")}>
-                      [Spring Boot] Instructions for creating Validation
-                      yourself to check Model & Entity
-                    </Link>
-                  </Col>
-                  <Col xs={4}>
-                    <span className="float-end text-muted fs-4">
-                      19 December, 2019
-                    </span>
-                  </Col>
-                </Row>
-              </div>
-              <div className={cx("card-item")}>
-                <Row>
-                  <Col xs={8}>
-                    <Link to={"/"} className={cx("card-link")}>
-                      [Spring Boot] Instructions for creating Validation
-                      yourself to check Model & Entity
-                    </Link>
-                  </Col>
-                  <Col xs={4}>
-                    <span className="float-end text-muted fs-4">
-                      19 December, 2019
-                    </span>
-                  </Col>
-                </Row>
-              </div>
+              {newUpdatedList.map((item) => {
+                return (
+                  <div key={item.id} className={cx("card-item")}>
+                    <Row>
+                      <Col xs={8}>
+                        <Link to={`/${item.code}`} className={cx("card-link")}>
+                          {item.title}
+                        </Link>
+                      </Col>
+                      <Col xs={4}>
+                        <span className="float-end text-muted fs-4">
+                          {item.createDate}
+                        </span>
+                      </Col>
+                    </Row>
+                  </div>
+                );
+              })}
             </div>
           </CardItem>
 
@@ -232,6 +209,42 @@ function Home() {
             </Container>
           </CardItem>
         </Col>
+      </Row>
+      <Row className="mt-5">
+        <h2 className={cx("page-title")}>Java</h2>
+      </Row>
+
+      <Row>
+        <Col xs={11}>
+          <Row>
+            <Col>
+              <CardItem className="rounded d-flex flex-column">
+                <Image className={cx('blog-image' , 'rounded-top')} src={images.image_one}/>
+                <h4 className={cx('blog-title')}>[Spring Boot] RESTful API Document with Spring Boot + OpenAPI 3.0</h4>
+              </CardItem>
+            </Col>
+            <Col>
+              <CardItem className="rounded d-flex flex-column">
+                <Image className={cx('blog-image' , 'rounded-top')} src={images.image_one}/>
+                <h4 className={cx('blog-title')}>[Spring Boot] RESTful API Document with Spring Boot + OpenAPI 3.0</h4>
+              </CardItem>
+            </Col>
+            <Col>
+              <CardItem className="rounded d-flex flex-column">
+                <Image className={cx('blog-image' , 'rounded-top')} src={images.image_one}/>
+                <h4 className={cx('blog-title')}>[Spring Boot] RESTful API Document with Spring Boot + OpenAPI 3.0</h4>
+              </CardItem>
+            </Col>
+            <Col>
+              <CardItem className="rounded d-flex flex-column">
+                <Image className={cx('blog-image' , 'rounded-top')} src={images.image_one}/>
+                <h4 className={cx('blog-title')}>[Spring Boot] RESTful API Document with Spring Boot + OpenAPI 3.0</h4>
+              </CardItem>
+            </Col>
+            
+          </Row>
+        </Col>
+        <Col style={{ backgroundColor: "yellow" }}>More</Col>
       </Row>
     </Container>
   );

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import classNames from "classnames/bind";
 
-import styles from "./Item.module.scss";
+import styles from "./CardItem.module.scss";
 const cx = classNames.bind(styles);
 
-function Item({
+function CardItem({
   className,
   children,
   borderPrimary = false,
@@ -21,10 +21,10 @@ function Item({
   return <div className={classes}>{children}</div>;
 }
 
-Item.propTypes = {
+CardItem.propTypes = {
   borderPrimary: PropTypes.bool,
   borderInfo: PropTypes.bool,
   borderWarning: PropTypes.bool,
 };
 
-export default Item;
+export default CardItem;
