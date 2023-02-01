@@ -4,15 +4,17 @@
 :root {
   --primary: #4e8938;
   --primary-bland: #80cc2b;
+  --primary-hot: #05aa0a;
   --primary-dark: #355555;
   --info: blue;
   --warning: orange;
 
-
   --white: #fff;
   --black: #000;
-  --grey:  #7b7a7a;
+  --grey: #7b7a7a;
   --grey-bland: #e6e6e6;
+  //Background
+  --bg-grey: rgb(246, 246, 246);
 
   //Text
   --text-grey: #7b7a7a;
@@ -40,6 +42,7 @@ body {
   text-rendering: optimizespeed;
 }
 
-input , button {
+input,
+button {
   outline: none;
 }

@@ -35,10 +35,6 @@ function Header() {
         className={hideHeaderTop ? styles.headerHeight1 : styles.headerHeight2}
       >
         <div
-          // className={
-          //   (cx("header-top"),
-          //   (hideHeaderTop ? "d-none" : ""))  
-          // }
           className={cx('header-top' , (hideHeaderTop ? "d-none" : ""))}
         >
           <Image className={cx("logo")} src={images.logo} alt="" />
