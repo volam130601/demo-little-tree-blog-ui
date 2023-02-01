@@ -1,7 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 import classNames from "classnames/bind";
 import { BiSearch } from "react-icons/bi";
-import { AiFillCloseCircle, AiOutlineLoading3Quarters } from "react-icons/ai";
+import { AiFillCloseCircle,
+  //  AiOutlineLoading3Quarters 
+  } from "react-icons/ai";
 import HeadlessTippy from "@tippyjs/react/headless";
 
 // import * as searchServices from '~/services/searchService';
@@ -11,7 +13,7 @@ import { Wrapper as PopperWrapper } from "~/components/Popper";
 // import { useDebounce } from '~/hooks';
 import styles from "./Search.module.scss";
 import BlogItem from "~/components/BlogItem";
-import images from "~/assets/images";
+// import images from "~/assets/images";
 
 const cx = classNames.bind(styles);
 
@@ -19,7 +21,7 @@ function Search() {
   const [searchValue, setSearchValue] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [showResult, setShowResult] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   //   const debouncedValue = useDebounce(searchValue, 500);
 
@@ -60,24 +62,24 @@ function Search() {
     }
   };
 
-  const data = [
-    {
-      id: 1,
-      code: "SB-Basic",
-      blog_image: images.image_test,
-      title: "Spring boot basic",
-    },
-    {
-      id: 2,
-      code: "SB-Advanced",
-      blog_image: images.image_test,
-      title: "Spring boot advanced",
-    },
-  ];
+  // const data = [
+  //   {
+  //     id: 1,
+  //     code: "SB-Basic",
+  //     blog_image: images.image_test,
+  //     title: "Spring boot basic",
+  //   },
+  //   {
+  //     id: 2,
+  //     code: "SB-Advanced",
+  //     blog_image: images.image_test,
+  //     title: "Spring boot advanced",
+  //   },
+  // ];
   useEffect(() => {
     setTimeout(() => {
-      setSearchResult(data);
-    }, 0);
+      setSearchResult([]);
+    },0);
   }, []);
 
   return (
@@ -107,13 +109,14 @@ function Search() {
             onFocus={() => setShowResult(true)}
           />
 
-          {searchValue && !loading && (
+          {/* {searchValue && !loading && ( */}
+          {searchValue && (
             <button className={cx("clear")} onClick={handleClear}>
               <AiFillCloseCircle />
             </button>
           )}
 
-          {loading && <AiOutlineLoading3Quarters className={cx("loading")} />}
+          {/* {loading && <AiOutlineLoading3Quarters className={cx("loading")} />} */}
 
           <div className={cx("search-btn")}>
             <BiSearch />

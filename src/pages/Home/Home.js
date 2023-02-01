@@ -6,6 +6,7 @@ import styles from "./Home.module.scss";
 import Item from "~/components/Item";
 import Image from "~/components/Image";
 import images from "~/assets/images";
+import { Link } from "react-router-dom";
 const cx = classNames.bind(styles);
 
 function Home() {
@@ -35,10 +36,36 @@ function Home() {
         </Col>
 
         <Col xs={8}>
-            <Item>
-                <h4>2</h4>
-
-            </Item>
+          <Item borderPrimary>
+            <div className={cx("card-list")}>
+              <h2 className={cx("card-title")}>New updated</h2>
+              <div className={cx("card-item")}>
+                <Row>
+                  <Col xs={8}>
+                    <Link to={"/"} className={cx("card-link")}>
+                      [Spring Boot] Instructions for creating Validation
+                    </Link>
+                  </Col>
+                  <Col xs={4}>
+                    <span className="float-end text-muted fs-4">19 December, 2019</span>
+                  </Col>
+                </Row>
+              </div>
+              <div className={cx("card-item")}>
+                <Row>
+                  <Col xs={8}>
+                    <Link to={"/"} className={cx("card-link")}>
+                      [Spring Boot] Instructions for creating Validation
+                      yourself to check Model & Entity
+                    </Link>
+                  </Col>
+                  <Col xs={4}>
+                    <span className="float-end text-muted fs-4">19 December, 2019</span>
+                  </Col>
+                </Row>
+              </div>
+            </div>
+          </Item>
         </Col>
       </Row>
     </Container>
