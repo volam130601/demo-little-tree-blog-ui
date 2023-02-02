@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "video-react/dist/video-react.css";
 
 import ReactDOM from "react-dom/client";
 import App from "./App";
